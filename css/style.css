@@ -1,0 +1,851 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    background: #E8E3DA;
+
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 30px;
+
+    cursor: default;
+
+}
+
+
+a,
+button {
+    cursor: pointer;
+}
+
+
+::selection {
+    background: #D9C4A0;
+    color: #222;
+}
+
+
+
+/* =========================================================
+   TARJETA
+========================================================= */
+
+.phone {
+
+    width: 380px;
+
+    border-radius: 34px;
+
+    overflow: hidden;
+
+    background: #333333;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .18);
+
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    background: #F5F1E8;
+
+    padding: 42px 30px 30px;
+
+    text-align: center;
+
+    animation: fadeHero 1s ease;
+
+}
+
+
+.profile {
+
+    width: 200px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 14px;
+
+    transition: transform .25s ease;
+
+}
+
+
+.user {
+
+    margin-top: 12px;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #7D7366;
+
+    text-transform: uppercase;
+
+}
+
+
+.hero h1 {
+
+    margin-top: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 44px;
+
+    font-weight: 700;
+
+    color: #222;
+
+    line-height: 1.05;
+
+}
+
+
+.divider {
+
+    width: 52px;
+
+    height: 1px;
+
+    background: #B89A6A;
+
+    margin: 18px auto 14px;
+
+    opacity: .8;
+
+}
+
+
+
+/* =========================================================
+   ANIMACIÓN HERO
+========================================================= */
+
+@keyframes fadeHero {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CONTENIDO OSCURO
+========================================================= */
+
+.content {
+
+    background: #333333;
+
+    padding: 28px;
+
+}
+
+
+
+/* =========================================================
+   BOTONES PEQUEÑOS
+========================================================= */
+
+.mini-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.mini-buttons a {
+
+    flex: 1;
+
+    text-decoration: none;
+
+    color: #F7F2EA;
+
+    border: 1px solid #D7C6AC;
+
+    padding: 14px 10px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: .3s;
+
+}
+
+
+.mini-buttons a:hover {
+
+    background: #F5F1E8;
+
+    color: #222;
+
+}
+
+
+
+/* =========================================================
+   BOTONES GRANDES
+========================================================= */
+
+.big {
+
+    display: block;
+
+    text-decoration: none;
+
+    background: #E5D7C2;
+
+    color: #222;
+
+    text-align: center;
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: .3s;
+
+}
+
+
+.big:hover {
+
+    background: #D8C5A7;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.description {
+
+    margin: 24px 8px;
+
+    text-align: center;
+
+    color: #DDD3C7;
+
+    font-size: 12px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   REDES
+========================================================= */
+
+.social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+.social a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    transition: .25s;
+
+}
+
+
+.social a:hover {
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+   FIRMA
+========================================================= */
+
+.signature {
+
+    margin-top: 26px;
+
+    text-align: center;
+
+}
+
+
+.line {
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #B89A6A;
+
+    margin: 0 auto 14px;
+
+}
+
+
+.signature p {
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: #D8C5A7;
+
+}
+
+
+
+/* =========================================================
+   BOTTOM SHEET / MODAL
+========================================================= */
+
+.overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .35);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s;
+
+}
+
+
+.overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.sheet {
+
+    width: 390px;
+
+    background: #F7F3EC;
+
+    border-radius: 28px 28px 0 0;
+
+    padding: 26px;
+
+    transform: translateY(100%);
+
+    transition: .38s ease;
+
+    position: relative;
+
+}
+
+
+.overlay.active .sheet {
+
+    transform: translateY(0);
+
+}
+
+
+
+/* =========================================================
+   HANDLE
+========================================================= */
+
+.handle {
+
+    width: 42px;
+
+    height: 4px;
+
+    border-radius: 20px;
+
+    background: #D4C6B3;
+
+    margin: 0 auto 18px;
+
+}
+
+
+
+/* =========================================================
+   CERRAR MODAL
+========================================================= */
+
+.close {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 22px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 26px;
+
+    color: #8B7762;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.eyebrow {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #A1896C;
+
+    margin-bottom: 10px;
+
+}
+
+
+.sheet h2 {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #222;
+
+    line-height: 1.1;
+
+    margin-bottom: 16px;
+
+}
+
+
+.about-text {
+
+    color: #615548;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.9;
+
+}
+
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.tags {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 22px;
+
+}
+
+
+.tags span {
+
+    border: 1px solid #D7C6AC;
+
+    padding: 10px 16px;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: #6C5C4A;
+
+}
+
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+#loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #F5F1E8;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 999;
+
+    transition: opacity .7s ease;
+
+}
+
+
+#loader.hide {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+#loader h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(32px, 8vw, 48px);
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.loader-line {
+
+    width: 0;
+
+    height: 1px;
+
+    background: #B89A6A;
+
+    margin: 18px 0;
+
+    animation: draw 1.2s forwards;
+
+}
+
+
+#loader p {
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    color: #8A7A67;
+
+    text-align: center;
+
+}
+
+
+@keyframes draw {
+
+    to {
+
+        width: 80px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ANIMACIÓN LETRA POR LETRA
+========================================================= */
+
+.title span {
+
+    display: inline-block;
+
+    opacity: 0;
+
+    transform: translateY(18px);
+
+    animation: reveal .5s forwards;
+
+}
+
+
+@keyframes reveal {
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   RETRASOS
+========================================================= */
+
+.title span:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.title span:nth-child(2) {
+    animation-delay: .10s;
+}
+
+.title span:nth-child(3) {
+    animation-delay: .15s;
+}
+
+.title span:nth-child(4) {
+    animation-delay: .20s;
+}
+
+.title span:nth-child(5) {
+    animation-delay: .25s;
+}
+
+.title span:nth-child(6) {
+    animation-delay: .30s;
+}
+
+.title span:nth-child(7) {
+    animation-delay: .35s;
+}
+
+.title span:nth-child(8) {
+    animation-delay: .40s;
+}
+
+.title span:nth-child(9) {
+    animation-delay: .45s;
+}
+
+.title span:nth-child(10) {
+    animation-delay: .50s;
+}
+
+.title span:nth-child(11) {
+    animation-delay: .55s;
+}
+
+.title span:nth-child(12) {
+    animation-delay: .60s;
+}
+
+.title span:nth-child(13) {
+    animation-delay: .65s;
+}
+
+.title span:nth-child(14) {
+    animation-delay: .70s;
+}
+
+.title span:nth-child(15) {
+    animation-delay: .75s;
+}
+
+.title span:nth-child(16) {
+    animation-delay: .80s;
+}
+
+.title span:nth-child(17) {
+    animation-delay: .85s;
+}
+
+.title span:nth-child(18) {
+    animation-delay: .90s;
+}
+
+.title span:nth-child(19) {
+    animation-delay: .95s;
+}
+
+.title span:nth-child(20) {
+    animation-delay: 1s;
+}
+
+.title span:nth-child(21) {
+    animation-delay: 1.05s;
+}
+
+.title span:nth-child(22) {
+    animation-delay: 1.10s;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+
+        padding: 0;
+
+        align-items: flex-start;
+
+    }
+
+
+    .phone {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        border-radius: 0;
+
+    }
+
+
+    .hero {
+
+        padding-top: 42px;
+
+    }
+
+
+   @media (max-width: 480px) {
+    #loader h1 {
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: -1px;
+        white-space: nowrap;
+    }
+}
+
+}
+
+
+@media (max-width: 360px) {
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .content {
+
+        padding: 24px 20px;
+
+    }
+
+
+    .mini-buttons a {
+
+        font-size: 10px;
+
+    }
+
+}
